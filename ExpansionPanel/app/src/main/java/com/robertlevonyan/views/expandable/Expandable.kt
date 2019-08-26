@@ -169,7 +169,7 @@ class Expandable : FrameLayout {
         if (headerLayout.indexOfChild(headerView) == -1) headerLayout.addView(headerView)
     }
 
-    private fun collapse() {
+    public fun collapse() {
         if (animateExpand) {
             expandIcon.animate().rotation(0f).duration = 200
             iconImage.animate().scaleX(1f).scaleY(1f).translationX(1f).translationY(1f).duration = 200
@@ -198,7 +198,7 @@ class Expandable : FrameLayout {
         }
     }
 
-    private fun expand() {
+    public fun expand() {
         createExpandableHeight()
         if (animateExpand) {
             expandIcon.animate().rotation(180f).duration = 200
